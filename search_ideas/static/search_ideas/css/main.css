@@ -31,32 +31,50 @@ header a{
     margin-left: 15px;
 }
 /* Idea Generator */
-#idea-generator-section{
-    padding-top: 20%;
+#idea-search-section{
+    padding-top: 5%;
     width: 80%;
     text-align: center;
     margin: auto;
 }
-#idea-generator-section img{
+#idea-search-section img{
     width: 4%;
     display: inline;
 }
-#idea-generator-section h3{
+#idea-search-section h1{
     display: inline;
-}
-#idea-generator-section h1{
     padding-top: 35px;
     padding-bottom: 50px;
 }
-/* The Generator Button */
-a.generator-btn{
-    background-color: #27ae60;
-    color: #fff;
+/* The Search Box*/
+#idea-search-section input{
+    display: block;
+    width: 50%;
+    clear: both;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #111;
     text-decoration: none;
+    border: 1px solid #111;
     padding: 12px;
     font-weight: 900;
     transition: all ease-in-out 180ms;
 }
-a.generator-btn:hover{
-    background-color: #14bb59;
+
+
+/* The Results Display */
+#search-results-display{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+/* A Result Item */
+.result-item{
+    padding: 8px;
+}
+.result-item h4{
+    font-size: 28px;
 }

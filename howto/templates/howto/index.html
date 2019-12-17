@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Come Up With Great SaaS Ideas | Idea Gene - Best place to come up with a online saas idea</title>
+    {% load static %}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'howto/css/main.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'ideagene:index' %}" class="nav-link">Idea Generator</a>
+        <a href="{% url 'search_ideas:index' %}" class="nav-link">Search Ideas</a>
+        <a href="#" class="nav-link">How to get ideas?</a>
+    </header>
+    <section id="main-article">
+        <div class="main-article-sub">
+            <h2 class="main-article-sub-head">How to Come Up with Great Ideas?</h2>
+            <p class="main-article-sub-content">
+                Everyone thinks that to comeup with great ideas I have to be artistic, creative and genius but the good news is anyone can have super ideas. 
+                The suprising thing is many great ideas came out of very simple things
+            </p>
+        </div>
+        <div class="main-article-sub">
+            <h2 class="main-article-sub-head">1. Have a Problem</h2>
+            <p class="main-article-sub-content">
+                Straight to the point. The ideas are the solutions to everyday problems
+            </p>
+        </div>
+        <div class="main-article-sub">
+            <h2 class="main-article-sub-head">2. Listen</h2>
+            <p class="main-article-sub-content">
+                The ears are the wifi to ideas. When You meet with Your friends, family or whatever You have to pay close attention to what they are saying.
+                If they talk with You about a problem then That's the point. You can make ideas out of it.
+            </p>
+        </div>
+        <div class="main-article-sub">
+            <h2 class="main-article-sub-head">3. Write down everything</h2>
+            <p class="main-article-sub-content">
+                When You think about ideas write everything come to Your mind. Or They'll fly away. Larry Page (Founder of Google) says 'when I was 23 I
+                suddenly woke up and think what If we can download whole web and just keep links. I grab the pen and start writing details' then did You know what happens next...
+                Google was born.
+            </p>
+        </div>
+        <div class="main-article-sub">
+            <h2 class="main-article-sub-head">Final</h2>
+            <p class="main-article-sub-content">
+                So If you want to have great ideas Don't thinking about being create, artisty and genius but be simple and be Yourself find answers to You own problems then the 
+                Ideas will automatically will come out of Your head. Thanks :)
+            </p>
+        </div>
+    </section>
+    <script>
+        let ideaList = [
+            {% for idea in idea_list %}
+            '{{ idea.idea_text }}',
+            {% endfor %}
+        ];
+        let themeList = [
+            {% for theme in theme_list %}
+            {'backgroundColor': '{{ theme.background_color }}','textColor': '{{ theme.text_color }}','buttonColor': '{{ theme.button_color }}'},
+            {% endfor %}
+        ];
+    </script>
+    <!-- Custom Scripts -->
+    <script src="{% static 'howto/scripts/main.js' %}"></script>
+</body>
+</html>

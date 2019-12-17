@@ -1,0 +1,41 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #1A1A1A;
+    color: #fff;
+}
+h1{
+    font-size: 38px;
+}
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 26px;
+}
+/* The Header */
+header{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+}
+/* The Main Article */
+#main-article{
+    width: 70%;
+    margin: auto;
+}
+/* A sub */
+#main-article .main-article-sub{
+    margin-top: 15px;
+}

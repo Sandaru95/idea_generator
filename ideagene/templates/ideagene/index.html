@@ -2,18 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idea Generator | Best place to come up with a online saas idea</title>
+    <title>Idea Generator | Idea Gene - Best place to come up with a online saas idea</title>
     {% load static %}
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'ideagene/css/main.css' %}">
 </head>
 <body>
     <header>
-        <a href="#">Idea Generator</a>
-        <a href="#">Search Ideas</a>
-        <a href="#">How to get ideas?</a>
+        <a href="{% url 'ideagene:index' %}" class="nav-link">Idea Generator</a>
+        <a href="{% url 'search_ideas:index' %}" class="nav-link">Search Ideas</a>
+        <a href="{% url 'howto:index' %}" class="nav-link">How to get ideas?</a>
     </header>
     <section id="idea-generator-section">
+        <img src="{% static 'ideagene/images/rocket.gif' %}">
         <h3>Best SaaS Idea Generator</h3>
         <h1 id="idea-text">Platform for people to share lyrics</h1>
         <a href="#" class="generator-btn" onclick="generateIdea();">GENERATE NEW IDEA</a>
@@ -22,6 +23,11 @@
         let ideaList = [
             {% for idea in idea_list %}
             '{{ idea.idea_text }}',
+            {% endfor %}
+        ];
+        let themeList = [
+            {% for theme in theme_list %}
+            {'backgroundColor': '{{ theme.background_color }}','textColor': '{{ theme.text_color }}','buttonColor': '{{ theme.button_color }}'},
             {% endfor %}
         ];
     </script>

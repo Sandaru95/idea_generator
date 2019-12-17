@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Ideas | Idea Gene - Best place to come up with a online saas idea</title>
+    {% load static %}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'search_ideas/css/main.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'ideagene:index' %}" class="nav-link">Idea Generator</a>
+        <a href="{% url 'search_ideas:index' %}" class="nav-link">Search Ideas</a>
+        <a href="{% url 'howto:index' %}" class="nav-link">How to get ideas?</a>
+    </header>
+    <section id="idea-search-section">
+        <img src="{% static 'search_ideas/images/rocket.gif' %}">
+        <h1>Search For Ideas</h1>
+        <input type="text" id="search_box" placeholder="Search Term" oninput="searchSubmission();">
+    </section>
+    <section id="search-results-display">
+
+    </section>
+    <script>
+        let ideaList = [
+            {% for idea in idea_list %}
+            '{{ idea.idea_text }}',
+            {% endfor %}
+        ];
+    </script>
+    <!-- Custom Scripts -->
+    <script src="{% static 'search_ideas/scripts/main.js' %}"></script>
+</body>
+</html>
