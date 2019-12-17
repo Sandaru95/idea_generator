@@ -1,0 +1,57 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #1A1A1A;
+    color: #fff;
+}
+h1{
+    font-size: 38px;
+}
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 26px;
+}
+/* The Header */
+header{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+}
+/* Idea Generator */
+#idea-generator-section{
+    padding-top: 20%;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+#idea-generator-section h3{
+    padding-bottom: 25px;
+}
+#idea-generator-section h1{
+    padding-bottom: 50px;
+}
+/* The Generator Button */
+a.generator-btn{
+    background-color: #27ae60;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 900;
+    transition: all ease-in-out 180ms;
+}
+a.generator-btn:hover{
+    background-color: #14bb59;
+}
